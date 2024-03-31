@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Leearning Asynchronous JavaScript</h1>
+    <!-- Button elements -->
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <!-- Div element to display output -->
+    <div id="output"></div>
+</body>
+<script>
+    // Define a function to log the current date and time in a readable format
+    const sayDate = function(str){
+        const currentDate = new Date();
+        // Format the date in a more readable format
+        const formattedDate = currentDate.toLocaleString();
+        console.log(str, formattedDate);
+        // Get the output div
+        const outputDiv = document.getElementById("output");
+        // Update the content of the output div with the formatted date
+        outputDiv.innerText = str + ": " + formattedDate;
+    }
+
+    // Initialize intervalId outside the setInterval function
+    let intervalId;
+
+    // Add event listener to the "Start" button to start the interval
+    document.querySelector('#start').addEventListener('click', function(){
+        // Start the interval and store the interval ID
+        intervalId = setInterval(sayDate, 1000, "After 1 Second");
+    });
+
+    // Add event listener to the "Stop" button to stop the interval
+    document.querySelector('#stop').addEventListener('click', function(){
+        // Clear the interval when the "Stop" button is clicked
+        clearInterval(intervalId);
+    });
+</script>
+</html>
