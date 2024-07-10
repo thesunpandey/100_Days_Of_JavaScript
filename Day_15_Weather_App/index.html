@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define the character set for the document -->
+    <meta charset="UTF-8">
+    <!-- Ensure proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the document -->
+    <title>Weather App</title>
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container for the entire app -->
+    <div class="main-container">
+        <!-- Top container for the app title and search form -->
+        <div class="container top">
+            <h1>Weather App</h1>
+            <!-- Search form for the city name, with onsubmit event to prevent form submission -->
+            <form action="" onsubmit="return false">
+                <!-- Input field for the city name search -->
+                <input type="text" class="search" placeholder="Search by city name">
+                <!-- Submit button for the search form -->
+                <button type="submit" class="btn">Submit</button>
+                <!-- Paragraph to display error messages -->
+                <p class="error"></p>
+            </form>
+            <!-- Section to display weather information -->
+            <section>
+                <!-- Container for the weather information -->
+                <div class="container">
+                    <!-- Container for the weather icon -->
+                    <div class="icon">
+                        <!-- Image element to display the weather icon -->
+                        <img src="" alt="" class="weather-icon">
+                    </div>
+                    <!-- Container for the location information -->
+                    <div class="location">
+                        <!-- Div to display the city and country -->
+                        <div class="city">Rewa, IN</div>
+                        <!-- Div to display the current date -->
+                        <div class="date">Wednesday, July 10 2024</div>
+                    </div>
+                    <!-- Container for the current weather information -->
+                    <div class="current">
+                        <!-- Div to display the current temperature -->
+                        <div class="temp">Temp: 35 <span>°C</span></div>
+                        <!-- Div to display the weather description -->
+                        <div class="weather">Weather: Rainy</div>
+                        <!-- Div to display the temperature range -->
+                        <div class="temp-range">Temp Range: 25°C / 30°C</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
