@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the document type and version of HTML -->
+    <meta charset="UTF-8">
+    <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page is properly scaled on all devices -->
+    <title>Random Quote Generator - API Project</title>
+    <!-- Title of the webpage -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
+    <!-- Links to an external CSS file (Skeleton CSS framework) -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- Placeholder for additional styles (commented out) -->
+</head>
+<body>
+    <div class="container">
+        <!-- Container for the main content -->
+        <h2>Quotes Generator</h2>
+        <!-- Main heading of the page -->
+        <form>
+            <!-- Form for user input -->
+            <div>
+                <label for="number">Number of Quotes</label>
+                <!-- Label for the input field -->
+                <input type="number" id="number">
+                <!-- Input field for specifying the number of quotes -->
+            </div>
+            <button class="get-quotes">Get Quotes</button>
+            <!-- Button to trigger the quote generation -->
+        </form>
+        <hr>
+        <!-- Horizontal line for separation -->
+        <ul class="quotes"></ul>
+        <!-- Unordered list to display the generated quotes -->
+    </div>
+    
+
+    <!-- <script src="ajax.js"></script> -->
+    <!-- Placeholder for additional scripts (commented out) -->
+    <script src="fetch.js"></script>
+    <!-- Links to the JavaScript file (fetch.js) for handling the quotes generation -->
+</body>
+</html>
