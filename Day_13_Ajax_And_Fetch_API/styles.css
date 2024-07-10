@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --white: #fff;
+    --black: #1c2b2d;
+    --blue: #3a86ff;
+    --light-blue: #8ecae6;
+    --color-primary: #7209b7;
+    --color-sec: #f72585;
+    --color-grey: #f8f9fa;
+    --color-dark-grey: #343a40;
+    --color-bg: #e9ecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    background-image: linear-gradient(135deg, var(--light-blue) 0%, var(--blue) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--color-dark-grey);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.user {
+    width: 100%;
+    border: none;
+    padding: 2rem;
+}
+
+.user > * {
+    margin: 1.5rem 0;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    background-color: var(--color-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-sec);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--color-grey);
+    margin: 2rem 0;
+}
+
+h2 {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-grey);
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    background-color: var(--color-grey);
+    padding-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 1rem;
+    }
+}
