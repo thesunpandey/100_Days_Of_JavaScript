@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+/* Variables */
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+  --error-color: #ea2c62;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  background-color: var(--grey);
+  color: var(--black);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Styles */
+section {
+  height: 100vh;
+  background-color: var(--grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Box Styles */
+.box {
+  background-color: var(--light-blue);
+  padding: 2rem;
+  width: 40rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 3rem;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Form Field Styles */
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  color: var(--white);
+  border-bottom: 1px solid var(--grey);
+  font-size: 1.6rem;
+  transition: background-color 0.3s;
+}
+
+.form-field:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-field label {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.form-field label:hover {
+  color: var(--color-sec);
+}
+
+/* Input Styles */
+.p-header {
+  position: relative;
+}
+
+.p-header input {
+  width: 100%;
+  background-color: var(--error-color);
+  padding: 1.4rem;
+  border-radius: 5px;
+  color: var(--white);
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  transition: background-color 0.3s;
+}
+
+.p-header input:focus {
+  background-color: darken(var(--error-color), 10%);
+}
+
+.p-header button,
+.form-field input[type="number"] {
+  padding: 3px 5px;
+  background-color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 3px 0 0 0;
+  font-size: 1.4rem;
+  transition: background-color 0.3s;
+}
+
+.p-header button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.p-header button:hover {
+  background-color: var(--color-sec);
+}
+
+/* Submit Button Styles */
+#submit {
+  width: 100%;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background-color: var(--color-sec);
+  color: var(--white);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#submit:hover {
+  background-color: var(--error-color);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-field label,
+  .form-field input[type="number"] {
+    width: 100%;
+    text-align: left;
+  }
+
+  #submit {
+    font-size: 1.6rem;
+  }
+}
+
+/* Focus Styles */
+input:focus,
+button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Button Hover and Focus Styles */
+button:hover,
+button:focus {
+  background-color: var(--color-primary);
+}
