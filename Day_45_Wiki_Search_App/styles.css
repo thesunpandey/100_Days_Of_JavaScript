@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(to right, var(--color-primary), var(--color-sec));
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 30%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form {
+  position: relative;
+}
+
+form button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+form i {
+  font-size: 1.6rem;
+  color: var(--light-blue);
+}
+
+input[type="text"] {
+  background: var(--grey);
+  border: none;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.results {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.results a {
+  color: var(--color-primary);
+}
+
+.results p {
+  color: var(--black);
+}
+
+.alert {
+  background: var(--color-sec);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--grey);
+  margin: 2rem 0;
+}
+
+.hide {
+  display: none;
+}
